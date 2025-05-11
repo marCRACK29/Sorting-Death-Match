@@ -1,3 +1,10 @@
+/***********************************
+ * Autor principal: Marcos Martínez Rojas (marCRACK29)
+ * Fecha: 11/05/2025
+ * Descripción: Algoritmo merge sort
+ * Última modificación: 11/05/2025
+*************************************/
+
 #include "merge.h"
 
 void merge(vector<int>& arr, int left, int mid, int right){
@@ -37,5 +44,10 @@ void merge(vector<int>& arr, int left, int mid, int right){
 }
 
 void mergeSort(vector<int>& arr, int left, int right){
+    if (left >= right) return; 
 
+    int mid = left + (right - left) / 2; 
+    mergeSort(arr, left, mid);
+    mergeSort(arr, mid+1, right);
+    merge(arr, left, mid, right);
 }
