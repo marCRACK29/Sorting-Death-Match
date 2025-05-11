@@ -1,4 +1,5 @@
 #include <iostream>
+#include "print_array.h"
 #include "merge.h"
 
 int main(){
@@ -9,5 +10,7 @@ int main(){
     n = arreglo.size();
     
     mergeSort(arreglo, 0, n-1);
+    printArray(arreglo);
+
     return 0; 
 }

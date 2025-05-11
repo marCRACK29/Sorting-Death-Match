@@ -3,7 +3,7 @@ TARGET = main
 CXX = g++
 CXXFLAGS = -Wall -std=c++17 -g
 
-SRCS = main.cpp merge.cpp heap.cpp
+SRCS = main.cpp merge.cpp heap.cpp print_array.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)
