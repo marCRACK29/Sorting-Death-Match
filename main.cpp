@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 #include "print_array.h"
 #include "merge.h"
 #include "heap.h"
@@ -14,5 +15,8 @@ int main(){
     heapSort(arreglo, n);    
     printArray(arreglo);
 
+    auto start = chrono::high_resolution_clock::now();
+    auto end = chrono::high_resolution_clock::now();
+    double running_time = chrono::duration_cast<chrono::microseconds>(end - start).count();
     return 0; 
 }
