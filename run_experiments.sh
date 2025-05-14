@@ -24,7 +24,12 @@ do
 
     for n in 100000 200000 300000 400000 500000
     do 
-        ./insertionsort $n
+       ./insertionsort $n
     done
-
+    
+    for n in 100000 200000 300000 400000 500000
+    do 
+        ./sort $n
+    done
+    
 done
