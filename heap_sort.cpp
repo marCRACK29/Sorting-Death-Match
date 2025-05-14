@@ -2,8 +2,9 @@
 * Autor principal: Marcos Martínez Rojas (marCRACK29)
 * Fecha: 11/05/2025
 * Descripción: Algoritmo heap sort
-* Última modificación: 11/05/2025
+* Última modificación: 12/05/2025
 */
+/* Obtenido de: https://www.geeksforgeeks.org/heap-sort/ */
 #include <iostream>
 #include <chrono>
 #include "heap_sort.h"

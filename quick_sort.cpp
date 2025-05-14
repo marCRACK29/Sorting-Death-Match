@@ -4,7 +4,7 @@
 * Descripción: Algoritmo quick sort
 * Última modificación: 13/05/2025
 */
-
+/* Obtenido de: https://www.techiedelight.com/es/quicksort/ */
 #include <iostream>
 #include <chrono>
 #include "quick_sort.h"

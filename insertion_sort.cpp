@@ -5,7 +5,7 @@
 * Última modificación: 13/05/2025
 */
 
-//Algoritmo inspirado en https://www.programiz.com/dsa/insertion-sort
+/*Algoritmo inspirado de https://www.programiz.com/dsa/insertion-sort */
 
 #include <iostream>
 #include <chrono>

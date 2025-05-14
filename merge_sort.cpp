@@ -2,9 +2,9 @@
  * Autor principal: Marcos Martínez Rojas (marCRACK29)
  * Fecha: 11/05/2025
  * Descripción: Algoritmo merge sort
- * Última modificación: 11/05/2025
+ * Última modificación: 12/05/2025
 *************************************/
-
+/* Obtenido de: https://www.geeksforgeeks.org/merge-sort/ */
 #include <iostream>
 #include <chrono>
 #include "merge_sort.h"
@@ -71,7 +71,5 @@ int main(int argc, char** argv) {
     running_time *= 1e-9; // Convertir a segundos
     cout << argv[0] << ";" << n << ";" << running_time << endl;
     
-
-
     return 0;
 }
