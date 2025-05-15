@@ -10,6 +10,6 @@ using namespace std;
  * @param arreglo Arreglo a organizar.
  */
 
-void insertionSort(vector<int>& arreglo);
+void insertionSort(vector<int>& arreglo, int left, int right);
 
 #endif

@@ -9,7 +9,7 @@ using namespace std;
  * @param arr Arreglo el cual se hará merge.
  * @param left índice más izquierdo (el inicio del primer arreglo).
  * @param mid índice limitador del primer subarreglo (y comienzo del segundo).
- * @param right índicie limitador del segundo arreglo.
+ * @param right índice limitador del segundo arreglo.
  */
 void merge(vector<int>& arr, int left, int mid, int right);
 
