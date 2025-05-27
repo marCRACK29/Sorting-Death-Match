@@ -2,16 +2,23 @@
 #include <algorithm>
 #include <chrono>
 #include "tim_sort.h"
-
-int main(int argc, char** argv) {
+#include "array_generator.h"
+using namespace std;
+int main(int argc, char** argv, char** argv2) {
     if(argc < 2) 
         cerr << "Usage: " << argv[0] << " <cantidad de elementos>" << endl;
     
     int n = atoi(argv[1]);
     vector<int> arr(n);
-    for(int i = 0; i < n; i++)
-        arr[i] = rand() % 100; // Genera números aleatorios entre 0 y 99
-    
+    if(argv2[1] == "ascendente") {
+        generarArregloAscendente(arr, n);
+    } 
+    else if(argv2[1] == "descendente") {
+        generarArregloDescendente(arr, n);
+    } 
+    else  if(argv2[1]=="random"){
+        generarArregloRandom(arr, n);
+    }    
     // Medir el tiempo que tarda el algoritmo
     auto start = chrono::high_resolution_clock::now();
     timSort(arr, n);

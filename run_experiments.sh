@@ -9,32 +9,32 @@ do
     # Ejecutar el programa con diferentes tamaños de entrada
     for n in 100000 200000 300000 400000 500000 
     do
-        ./mergesort $n
+        ./mergesort $n random
     done
 
     for n in 100000 200000 300000 400000 500000
     do 
-        ./heapsort $n
+        ./heapsort $n random
     done
 
     for n in 100000 200000 300000 400000 500000
     do 
-        ./quicksort $n
+        ./quicksort $n random
     done
 
     for n in 100000 200000 300000 400000 500000
     do 
-       ./insertionsort $n
+       ./insertionsort $n random
     done
     
     for n in 100000 200000 300000 400000 500000
     do 
-        ./sort $n
+        ./sort $n random
     done
 
     for n in 100000 200000 300000 400000 500000
     do 
-        ./timsort $n
+        ./timsort $n random
     done
     
 done
