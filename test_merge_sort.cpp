@@ -1,21 +1,32 @@
 #include <iostream>
 #include <chrono>
+#include <string>
+#include <cstring>
 #include "merge_sort.h"
 #include "array_generator.h"
 using namespace std;
-int main(int argc, char** argv, char** argv2) {
-    if(argc < 2) 
-        cerr << "Usage: " << argv[0] << " <cantidad de elementos>" << endl;
+
+int main(int argc, char** argv) {
+    if(argc < 3) {
+        cerr << "Usage: " << argv[0] << " <cantidad de elementos> <tipo_orden>" << endl;
+        cerr << "Tipos de orden disponibles: ascendente, descendente, random" << endl;
+        return 1;
+    }
     
     int n = atoi(argv[1]);
+    if(n <= 0) {
+        cerr << "Error: La cantidad de elementos debe ser un número positivo" << endl;
+        return 1;
+    }
+
     vector<int> arr(n);
-    if(argv2[1] == "ascendente") {
+    if(strcmp(argv[2], "ascendente")) {
         generarArregloAscendente(arr, n);
     } 
-    else if(argv2[1] == "descendente") {
+    else if(strcmp(argv[2], "descendente")) {
         generarArregloDescendente(arr, n);
     } 
-    else  if(argv2[1]=="random"){
+    else  if(strcmp(argv[2], "random")){
         generarArregloRandom(arr, n);
     }
     

@@ -1,6 +1,7 @@
 #ifndef ARRAY_GENERATOR_H
 #define ARRAY_GENERATOR_H
 #include <vector>
+#include <iostream>
 using namespace std;
 
 /**
