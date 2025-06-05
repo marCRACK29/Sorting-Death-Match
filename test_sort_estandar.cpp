@@ -10,6 +10,7 @@
 #include <algorithm> // Para la función sort()
 #include <chrono>
 #include "array_generator.h"
+#include <string.h>
 using namespace std; 
 
 int main(int argc, char** argv, char** argv2) {

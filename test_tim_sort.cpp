@@ -3,6 +3,7 @@
 #include <chrono>
 #include "tim_sort.h"
 #include "array_generator.h"
+#include <string.h>
 using namespace std;
 int main(int argc, char** argv, char** argv2) {
     if(argc < 3) {

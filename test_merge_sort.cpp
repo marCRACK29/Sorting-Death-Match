@@ -4,6 +4,7 @@
 #include <cstring>
 #include "merge_sort.h"
 #include "array_generator.h"
+#include <string.h>
 using namespace std;
 
 int main(int argc, char** argv) {
