@@ -2,47 +2,41 @@
 * Autor principal: Gabriel Catillo Castillo (zMRGABOz)
 * Fecha: 13/05/2025
 * Descripción: Algoritmo quick sort
-* Última modificación: 27/05/2025
+* Última modificación: 05/06/2025
 */
-/* Obtenido de: https://www.techiedelight.com/es/quicksort/ */
 #include <iostream>
 #include <chrono>
 #include "quick_sort.h"
 
 
-int particion( vector<int> &arreglo, int comienzo, int fin){
-    //Se elige como pivote al elemento al final de la particion
-    int pivote = arreglo[fin];
-    //Los elementos mayores que el pivote se moverán a la derecha de index, y los menores a la izquierda
+int particion(vector<int> &arreglo, int comienzo, int fin){
+    //Se elige un pivote aleatorio
+    int pivote = arreglo[comienzo + rand() % (fin - comienzo + 1)];
+    
     int index = comienzo;
-
-    //Cada vez que se encuentra un elemento menor o igual que el pivote, index aumenta y el elemento se posiciona antes que el pivote
-    for(int i = comienzo; i< fin ; i++){
-        if(arreglo[i] <= pivote){
-            swap(arreglo[i], arreglo[index]);
+    int right = fin; 
+    //Los elementos mayores que el pivote se moverán a la derecha de index, y los menores a la izquierda
+    while(index <= right){
+        while(arreglo[index] < pivote){
             index++;
         }
+        while(arreglo[right] > pivote){
+            right--;
+        }
+        if(index <= right){
+            swap(arreglo[index], arreglo[right]); // Intercambiamos los elementos
+            index++;
+            right--;
+        }
     }
-
-    //Intercambia index con pivote
-    swap (arreglo[index], arreglo[fin]);
-    
-    return index;
-
+    return right;
 }
 
 void quickSort(vector<int> &arreglo, int comienzo, int fin){
-    //Condición base
-    if(comienzo >= fin){
-        return;
+    if(comienzo < fin){
+        int ind = particion(arreglo, comienzo, fin); // Obtener el índice del pivote
+        quickSort(arreglo, comienzo, ind); // Ordenar la sección izquierda
+        quickSort(arreglo, ind + 1, fin); // Ordenar la sección derecha
     }
-
-    // Se obtiene el índice del pivote después de la partición
-    int pivote = particion(arreglo, comienzo, fin);
- 
-    //Se ordenan los subarreglos izquierdo y derecho
-    quickSort(arreglo, comienzo, pivote - 1);
-    quickSort(arreglo, pivote + 1, fin);
-
 }
 
