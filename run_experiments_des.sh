@@ -7,34 +7,34 @@ echo "ejecutable;numElementos;tiempo"
 for ((c=1; c<=30; c++))
 do
     # Ejecutar el programa con diferentes tamaños de entrada
-    for n in 100000 200000 300000 400000 500000 
+    for n in 1 10 50 100
     do
-        ./mergesort $n descendente
+        ./merge_sort/mergesort datasets/descendente_${n}MB.bin
     done
 
-    for n in 100000 200000 300000 400000 500000
+    for n in 1 10 50 100
     do 
-        ./heapsort $n descendente
+        ./heap_sort/heapsort datasets/descendente_${n}MB.bin
     done
 
-    for n in 100000 200000 300000 400000 500000
+    for n in 1 10 50 100
     do 
-        ./quicksort $n descendente
+        ./quick_sort/quicksort datasets/descendente_${n}MB.bin
     done
 
-    for n in 100000 200000 300000 400000 500000
+    for n in 1 10 50 100
     do 
-       ./insertionsort $n descendente
+       ./insertion_sort/insertionsort datasets/descendente_${n}MB.bin
     done
     
-    for n in 100000 200000 300000 400000 500000
+    for n in 1 10 50 100
     do 
-        ./sort $n descendente
+        ./sort datasets/descendente_${n}MB.bin
     done
 
-    for n in 100000 200000 300000 400000 500000
+    for n in 1 10 50 100
     do 
-        ./timsort $n descendente
+        ./tim_sort/timsort datasets/descendente_${n}MB.bin
     done
     
 done

@@ -9,43 +9,32 @@
 #include <vector>
 #include <algorithm> // Para la función sort()
 #include <chrono>
-#include "array_generator.h"
+#include "utils/dataset_loader.h"
 #include <string.h>
 using namespace std; 
 
 int main(int argc, char** argv) {
-    if(argc < 3) {
-        cerr << "Usage: " << argv[0] << " <cantidad de elementos> <tipo_orden>" << endl;
-        cerr << "Tipos de orden disponibles: ascendente, descendente, mixto, random" << endl;
-        return 1;
-    }
-    
-    int n = atoi(argv[1]);
-    if(n <= 0) {
-        cerr << "Error: La cantidad de elementos debe ser un número positivo" << endl;
+    if(argc < 2) {
+        cerr << "Usage: " << argv[0] << " <nombre_archivo_binario>" << endl;
         return 1;
     }
 
-    vector<int> arr(n);
-    if(strcmp(argv[2], "ascendente")) {
-        generarArregloAscendente(arr, n);
-    } 
-    else if(strcmp(argv[2], "descendente")) {
-        generarArregloDescendente(arr, n);
-    } 
-    else  if(strcmp(argv[2], "random")){
-        generarArregloRandom(arr, n);
-    }
-    else if(strcmp(argv[2], "mixto")){
-        generarArregloMixto(arr, n);
+    string nombreArchivo = argv[1];
+    vector<int> arr = cargarDataset(nombreArchivo);
+    
+    if (arr.empty()) {
+        cerr << "No se pudo cargar el dataset" << endl;
+        return 1;
     }
 
     auto start = chrono::high_resolution_clock::now();
-    sort(arr.begin(), arr.end()); // Orden ascendente
+    sort(arr.begin(), arr.end());
     auto end = chrono::high_resolution_clock::now();
+    
     double running_time = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
     running_time *= 1e-9; // Convertir a segundos
-    cout << argv[0] << ";" << n << ";" << running_time << endl;
+    
+    cout << argv[0] << ";" << arr.size() << ";" << running_time << endl;
     
     return 0; 
 }

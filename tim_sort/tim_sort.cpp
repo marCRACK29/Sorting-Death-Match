@@ -8,8 +8,8 @@
 
 #include <algorithm>
 #include "tim_sort.h"
-#include "merge_sort.h"
-#include "insertion_sort.h"
+#include "../merge_sort/merge_sort.h"
+#include "../insertion_sort/insertion_sort.h"
 
 const int RUN = 32; // Tamaño máximo de un subarreglo 
 
