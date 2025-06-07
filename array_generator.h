@@ -28,4 +28,12 @@ void generarArregloDescendente(vector<int>& arr, int n);
  */
 void generarArregloRandom(vector<int>& arr, int n);
 
+/**
+ * @brief Genera un arreglo mixto con secciones ascendentes y descendentes
+ * 
+ * @param arr Arreglo a llenar
+ * @param n Tamaño del arreglo
+ */
+void generarArregloMixto(vector<int>& arr, int n);
+
 #endif

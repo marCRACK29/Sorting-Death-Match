@@ -13,10 +13,10 @@
 #include <string.h>
 using namespace std; 
 
-int main(int argc, char** argv, char** argv2) {
+int main(int argc, char** argv) {
     if(argc < 3) {
         cerr << "Usage: " << argv[0] << " <cantidad de elementos> <tipo_orden>" << endl;
-        cerr << "Tipos de orden disponibles: ascendente, descendente, random" << endl;
+        cerr << "Tipos de orden disponibles: ascendente, descendente, mixto, random" << endl;
         return 1;
     }
     
@@ -35,6 +35,9 @@ int main(int argc, char** argv, char** argv2) {
     } 
     else  if(strcmp(argv[2], "random")){
         generarArregloRandom(arr, n);
+    }
+    else if(strcmp(argv[2], "mixto")){
+        generarArregloMixto(arr, n);
     }
 
     auto start = chrono::high_resolution_clock::now();
