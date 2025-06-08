@@ -1,3 +1,10 @@
+/*
+* Autores: Gabriel Castillo Castillo (zMRGABOz), Marcos Martínez (marCRACK29)
+* Fecha: 07/06/2025
+* Descripción: Funcion para cargar datasets
+* Última modificación: 07/06/2025
+*/
+
 #include "dataset_loader.h"
 #include <fstream>
 #include <iostream>
