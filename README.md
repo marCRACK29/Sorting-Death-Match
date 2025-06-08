@@ -32,7 +32,7 @@ Esto generará la carpeta datasets, en donde estarán los datasets necesarios pa
 
 Simplemente en terminal, en carpeta raiz ejecuten el script bash que deseen de la siguiente manera (ejemplo): 
 ```bash
-./run_experiments.sh
+bash ./run_experiments_asc.sh > resultados_asc.csv
 ```
-A continuación se actualizará el archivo formato CSV (resultados_random.csv) el cual se encarga de almacenar los resultados. 
+A continuación se actualizará el archivo formato CSV el cual se encarga de almacenar los resultados. 
 

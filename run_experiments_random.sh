@@ -8,6 +8,11 @@ for ((c=1; c<=30; c++))
 do
     # Ejecutar el programa con diferentes tamaños de entrada
     for n in 1 10 50 100
+    do 
+        ./sort_STL/sort datasets/random_${n}MB.bin
+    done
+
+    for n in 1 10 50 100
     do
         ./merge_sort/mergesort datasets/random_${n}MB.bin
     done
@@ -20,11 +25,6 @@ do
     for n in 1 10 50 100
     do 
         ./quick_sort/quicksort datasets/random_${n}MB.bin
-    done
-
-    for n in 1 10 50 100
-    do 
-        ./sort datasets/random_${n}MB.bin
     done
 
     for n in 1 10 50 100
