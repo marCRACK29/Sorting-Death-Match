@@ -9,29 +9,29 @@ do
     # Ejecutar el programa con diferentes tamaños de entrada
     for n in 1 10 50 100
     do
-        ./merge_sort/mergesort datasets/descendente_${n}MB.bin
+        ./merge_sort/mergesort datasets/mixto_${n}MB.bin
     done
 
     for n in 1 10 50 100
     do 
-        ./heap_sort/heapsort datasets/descendente_${n}MB.bin
+        ./heap_sort/heapsort datasets/mixto_${n}MB.bin
     done
 
     for n in 1 10 50 100
     do 
-        ./quick_sort/quicksort datasets/descendente_${n}MB.bin
+        ./quick_sort/quicksort datasets/mixto_${n}MB.bin
     done
 
     
     
     for n in 1 10 50 100
     do 
-        ./sort datasets/descendente_${n}MB.bin
+        ./sort datasets/mixto_${n}MB.bin
     done
 
     for n in 1 10 50 100
     do 
-        ./tim_sort/timsort datasets/descendente_${n}MB.bin
+        ./tim_sort/timsort datasets/mixto_${n}MB.bin
     done
     
 done
@@ -42,8 +42,6 @@ do
 
     for n in 1 10 50 100
     do 
-       ./insertion_sort/insertionsort datasets/descendente_${n}MB.bin
+       ./insertion_sort/insertionsort datasets/mixto_${n}MB.bin
     done
-
-
 done

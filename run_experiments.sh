@@ -24,11 +24,6 @@ do
 
     for n in 1 10 50 100
     do 
-       ./insertion_sort/insertionsort datasets/random_${n}MB.bin
-    done
-    
-    for n in 1 10 50 100
-    do 
         ./sort datasets/random_${n}MB.bin
     done
 
@@ -37,4 +32,13 @@ do
         ./tim_sort/timsort datasets/random_${n}MB.bin
     done
     
+done
+
+# Insertion Sort separado porque se demora mucho y afecta a los otros algoritmos
+for ((z=1; z<=10; z++))
+do
+    for n in 1 10 50 100
+    do 
+       ./insertion_sort/insertionsort datasets/random_${n}MB.bin
+    done
 done
