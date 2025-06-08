@@ -3,7 +3,6 @@
  * Fecha: 13/05/2025
  * Descripción: Algoritmo insertion sort
  * Última modificación: 07/06/2025  
- * Algoritmo inspirado de https://www.programiz.com/dsa/insertion-sort 
 *************************************/
 
 #include "insertion_sort.h"
@@ -11,6 +10,7 @@
 void insertionSort(vector<int>& arr, int left, int right) {
     const int l = left;
     const int r = right;
+
     for (int i = l + 1; i <= r; ++i) {
         int temp = arr[i];
         int j = i;
@@ -28,5 +28,4 @@ void insertionSort(vector<int>& arr, int left, int right) {
         // Solo escribir si hubo movimiento
         arr[j] = temp;
     }
-
 }

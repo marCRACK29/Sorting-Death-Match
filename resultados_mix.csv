@@ -1,0 +1,8 @@
+ejecutable;numElementos;tiempo
+./merge_sort/mergesort;1000000;0.920396
+./merge_sort/mergesort;10000000;9.87935
+./merge_sort/mergesort;50000000;49.9005
+./merge_sort/mergesort;100000000;94.7976
+./heap_sort/heapsort;1000000;0.876445
+./heap_sort/heapsort;10000000;11.7568
+./heap_sort/heapsort;50000000;64.0015
