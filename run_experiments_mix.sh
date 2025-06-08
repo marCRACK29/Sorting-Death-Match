@@ -24,17 +24,17 @@ do
 
     for n in 1 10 50 100
     do 
-       ./insertion_sort/insertionsort datasets/mixto_${n}MB.bin
-    done
-    
-    for n in 1 10 50 100
-    do 
         ./sort_STL/sort datasets/mixto_${n}MB.bin
     done
 
     for n in 1 10 50 100
     do 
         ./tim_sort/timsort datasets/mixto_${n}MB.bin
+    done
+
+    for n in 1 10 50 100
+    do 
+       ./insertion_sort/insertionsort datasets/mixto_${n}MB.bin
     done
     
 done
