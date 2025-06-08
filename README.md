@@ -7,14 +7,6 @@ Estructuras de Datos
 - Gabriel Sebastián Castillo Castillo
 - Marcos Emiliano Martínez Rojas
 
-## Cómo ejecutar
-
-Simplemente en terminal, ejecuten el script bash que deseen de la siguiente manera (ejemplo): 
-```bash
-./run_experiments.sh
-```
-A continuación se actualizará el archivo formato CSV el cual se encarga de almacenar los resultados. 
-
 ## Cómo generar datasets
 
 Para generar los datasets necesarios para los experimentos, sigue estos pasos:
@@ -35,3 +27,12 @@ g++ -o data_set_generator data_set_generator.cpp
 ```
 
 Esto generará la carpeta datasets, en donde estarán los datasets necesarios para la ejecución de los experimentos
+
+## Cómo ejecutar
+
+Simplemente en terminal, en carpeta raiz ejecuten el script bash que deseen de la siguiente manera (ejemplo): 
+```bash
+./run_experiments.sh
+```
+A continuación se actualizará el archivo formato CSV (resultados_random.csv) el cual se encarga de almacenar los resultados. 
+

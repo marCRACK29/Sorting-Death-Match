@@ -22,8 +22,6 @@ do
         ./quick_sort/quicksort datasets/mixto_${n}MB.bin
     done
 
-    
-    
     for n in 1 10 50 100
     do 
         ./sort datasets/mixto_${n}MB.bin

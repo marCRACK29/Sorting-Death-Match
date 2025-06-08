@@ -21,8 +21,6 @@ do
     do 
         ./quick_sort/quicksort datasets/descendente_${n}MB.bin
     done
-
-    
     
     for n in 1 10 50 100
     do 

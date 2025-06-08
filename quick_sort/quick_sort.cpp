@@ -2,7 +2,7 @@
 * Autor principal: Gabriel Catillo Castillo (zMRGABOz)
 * Fecha: 13/05/2025
 * Descripción: Algoritmo quick sort
-* Última modificación: 05/06/2025
+* Última modificación: 08/06/2025
 */
 #include <iostream>
 #include <chrono>
@@ -17,12 +17,12 @@ int particion(vector<int> &arreglo, int comienzo, int fin){
     int right = fin; 
     //Los elementos mayores que el pivote se moverán a la derecha de index, y los menores a la izquierda
     while(index <= right){
-        while(arreglo[index] < pivote){
+        while(arreglo[index] < pivote)
             index++;
-        }
-        while(arreglo[right] > pivote){
+        
+        while(arreglo[right] > pivote)
             right--;
-        }
+        
         if(index <= right){
             swap(arreglo[index], arreglo[right]); // Intercambiamos los elementos
             index++;
